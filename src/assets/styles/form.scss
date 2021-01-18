@@ -1,0 +1,27 @@
+.form{
+    width: 100%;
+    max-width: 600px;
+    margin:  0 auto 60px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &-group{
+        width: 100%;
+        label{
+            color: rgba(255, 255, 255, 0.801);
+            text-align: start;
+        }
+        div{
+            small{
+                color: rgba(255, 255, 255, 0.801);
+                text-align: start;
+            }
+        }
+    }
+    &-button-group{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}

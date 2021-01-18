@@ -1,0 +1,31 @@
+.list-group{
+    margin-top: 50px;
+    max-width: 1200px;
+    &-item{
+        cursor: pointer;
+        padding: 10px;
+        margin-bottom: 10px;
+        transition: 0.2s ease;
+        background: #2929299a;
+        &-top{
+            display: flex;
+            justify-content: space-between;
+            p{
+                color: rgba(255, 255, 255, 0.801);
+            }
+        }
+        &-bottom{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: rgba(255, 255, 255, 0.801);
+            div{
+                text-align: end;
+            }
+        }
+        &:hover{
+            transition: 0.2s ease;
+            background: #3838389a;
+        }
+    }
+}

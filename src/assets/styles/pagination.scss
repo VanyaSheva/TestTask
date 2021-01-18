@@ -1,0 +1,13 @@
+.pagination{
+    align-items: center;
+    justify-content: center;
+    li{
+        margin-right: 8px;
+        a{
+            color: inherit !important;
+        }
+        &.active{
+            color: red !important;
+        }
+    }
+}
