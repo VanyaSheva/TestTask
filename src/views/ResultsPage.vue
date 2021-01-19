@@ -150,9 +150,11 @@ a{
   margin-bottom: 1rem;
 }
 .keywords{
+  flex-wrap: wrap;
   display: flex;
   p{
     margin-right: 10px;
+    margin-bottom: 0;
   }
   span{
     margin-right: 5px;
