@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import getPackages from './getPackages'
-import getPackage from './getPackageInfo'
 
 Vue.use(Vuex);
 
@@ -23,6 +22,6 @@ export default new Vuex.Store({
     error: (s) => s.error,
   },
   modules: {
-    getPackages, getPackage
+    getPackages
   },
 });
