@@ -152,6 +152,7 @@ a{
 .keywords{
   flex-wrap: wrap;
   display: flex;
+  margin-bottom: 10px;
   p{
     margin-right: 10px;
     margin-bottom: 0;
