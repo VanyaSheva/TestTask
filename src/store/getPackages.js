@@ -10,7 +10,7 @@ export default {
   },
   actions: {
       getPackagesData: async (context, name) => {
-        let {data} = await Axios.get(`https://thingproxy.freeboard.io/fetch/https://registry.npmjs.org/${name}`).catch(error => console.log(error));
+        let {data} = await Axios.get(`https://cors-anywhere.herokuapp.com/https://registry.npmjs.org/${name}`).catch(error => console.log(error));
         context.commit('setPackages', data);
       },
   },
