@@ -120,6 +120,7 @@ export default {
       if (acc[acc.length - 1].length === this.pageSize) {
         acc.push([]);
       }
+      
       acc[acc.length - 1].push(c);
         return acc;
       }, [[]]);
