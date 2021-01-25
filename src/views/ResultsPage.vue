@@ -1,8 +1,8 @@
 <template>
   <div class="main">
     <Form
-    @formSubmit="searchPackage"
-    :disable-button="loading"
+      @formSubmit="searchPackage"
+      :disable-button="loading"
     />
     <b-alert v-model="showError" variant="danger" dismissible>
       Something went wrong!
@@ -15,8 +15,8 @@
       <div v-if="packageInfo.keywords" class="keywords">
         <p>Keywords:</p>
         <span
-        v-for="item in packageInfo.keywords"
-        :key="item"
+          v-for="item in packageInfo.keywords"
+          :key="item"
         >
         {{item}}
         </span>
@@ -29,10 +29,10 @@
     <vue-loaders-ball-spin-fade-loader v-if="loading"/>
     <b-list-group v-else-if="!loading && packageItems">
       <b-list-group-item
-      v-for="item in items"
-      :key="item._id"
-      v-b-modal.modal-1
-      @click="openModalWindow(item)"
+        v-for="item in items"
+        :key="item._id"
+        v-b-modal.modal-1
+        @click="openModalWindow(item)"
       >
       <div class="list-group-item-top">
         <p v-if="item.name">Package name: {{item.name}}</p>
@@ -59,7 +59,6 @@
       :break-view-class="'break'"
       :container-class="'pagination'"
     />
-
   </div>
 </template>
 
@@ -86,7 +85,7 @@ export default {
   computed: {
     ...mapGetters(['getPackages']),
   },
-  methods:{
+  methods: {
     ...mapActions(['getPackagesData']),
     searchPackage(query) {
       this.loading = true;
@@ -120,10 +119,10 @@ export default {
       if (acc[acc.length - 1].length === this.pageSize) {
         acc.push([]);
       }
-      
       acc[acc.length - 1].push(c);
         return acc;
       }, [[]]);
+      
       this.pageCount = this.allItems.length;
       this.items = this.allItems[this.page - 1] || this.allItems[0];
       },
